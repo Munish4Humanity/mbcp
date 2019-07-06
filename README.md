@@ -1,2 +1,2 @@
-# mbcp
-Meena Bazaar Control Panel
+# MeenaBazaar
+Market Place
