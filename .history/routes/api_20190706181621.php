@@ -27,6 +27,7 @@ Route::group([
     });
 });
 
+
 Route::resource('recipes', 'recipeAPIController');
 
 Route::resource('foods', 'foodAPIController');

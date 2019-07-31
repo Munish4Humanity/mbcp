@@ -16,8 +16,11 @@ Route::group([
     'prefix' => 'auth'
 ], function () {
     Route::post('login', 'Auth\AuthController@login')->name('login');
-    Route::post('register', 'Auth\AuthController@register');
-
+    //Route::post('register', 'Auth\AuthController@register');
+    Route::post('register',[
+        'uses' => 'Auth\AuthController@register',
+        'as'   => 'register'
+    ]);
     Route::group([
       'middleware' => 'auth:api'
     ], function() {
@@ -26,6 +29,7 @@ Route::group([
 
     });
 });
+
 
 Route::resource('recipes', 'recipeAPIController');
 
